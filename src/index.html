@@ -75,7 +75,7 @@ window.addEventListener('scroll',()=>{
  
 
 
-
+ <!-- ================= JAVASCRIPT POUR CONTACT ================= -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const contactObserver = new IntersectionObserver(entries => {
@@ -113,6 +113,25 @@ window.addEventListener('scroll',()=>{
     document.querySelectorAll('.reveal-contact').forEach(el => contactObserver.observe(el));
   });
 </script>
+
+
+ <!-- ================= JAVASCRIPT POUR MENU MOBILE ================= -->
+<script>
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function openMenu() {
+    mobileMenu.classList.remove('pointer-events-none');
+    mobileMenu.classList.remove('opacity-0');
+    mobileMenu.classList.add('opacity-100');
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.add('opacity-0');
+    mobileMenu.classList.remove('opacity-100');
+    setTimeout(() => mobileMenu.classList.add('pointer-events-none'), 300);
+  }
+</script>
+
 
 </body>
 </html>
