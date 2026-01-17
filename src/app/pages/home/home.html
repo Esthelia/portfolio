@@ -1,3 +1,26 @@
+<!-- ================= LOADER ================= -->
+<div id="loader"
+  class="fixed inset-0 bg-black z-[9999] flex items-center justify-center text-white">
+  <div class="text-center">
+    <div class="text-4xl font-bold tracking-[0.4em] mb-6">KEE</div>
+    <div class="w-48 h-[2px] bg-white/30 overflow-hidden">
+      <div id="loader-bar" class="h-full bg-white w-0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MENU MOBILE ================= -->
+<div id="mobileMenu"
+  class="fixed inset-0 bg-black text-white z-[9998]
+         flex flex-col items-center justify-center
+         gap-12 text-2xl tracking-widest uppercase
+         opacity-0 pointer-events-none">
+  <a href="#home" onclick="closeMenu()">A Propos</a>
+  <a href="#profile" onclick="closeMenu()">Profil</a>
+  <a href="#projects" onclick="closeMenu()">Projets</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
 <!-- ================= HOME / HERO ================= -->
 <section id="home" class="min-h-screen bg-[#EFEAE3] flex justify-center py-5">
   <div class="w-[94%] max-w-[1500px] bg-white relative overflow-hidden">
@@ -6,35 +29,28 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-black/5">
       <nav class="flex items-center justify-between px-6 md:px-16 py-5 max-w-[1500px] mx-auto">
 
-        <!-- Logo -->
+        <!-- Logo KEE -->
         <div class="flex items-center gap-4">
           <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
             <span class="text-white text-lg font-bold tracking-widest">KEE</span>
           </div>
-          <span class="hidden sm:block text-xs tracking-[0.35em] font-medium uppercase">
-            Esther Kouame
-          </span>
+          <span class="hidden sm:block text-xs tracking-[0.35em] uppercase font-medium">Esther Kouame</span>
         </div>
 
         <!-- Menu -->
         <ul class="hidden md:flex items-center gap-14 text-xs tracking-[0.25em] uppercase">
-          <li>
-            <a href="#home" class="relative after:absolute after:left-0 after:-bottom-3 after:w-full after:h-[2px] after:bg-black">
-              Accueil
-            </a>
-          </li>
+          <li><a href="#home" class="relative after:absolute after:left-0 after:-bottom-3 after:w-full after:h-[2px] after:bg-black">Accueil</a></li>
           <li><a href="#profile" class="hover:opacity-60 transition">Profil</a></li>
           <li><a href="#projects" class="hover:opacity-60 transition">Projets</a></li>
+           <li><a href="#services" class="hover:opacity-60 transition">Services</a></li>
           <li><a href="#contact" class="hover:opacity-60 transition">Contact</a></li>
         </ul>
 
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-3xl" onclick="openMenu()">☰</button>
+
         <!-- CTA -->
-        <a
-          href="#contact"
-          class="bg-black text-white px-8 py-3 rounded-full text-xs tracking-[0.3em] uppercase shadow-lg hover:translate-y-[-2px] transition"
-        >
-          Engagez-moi
-        </a>
+        <a href="#contact" class="hidden md:block bg-black text-white px-8 py-3 rounded-full text-xs tracking-[0.3em] uppercase shadow-lg hover:translate-y-[-2px] transition">Engagez-moi</a>
       </nav>
     </header>
 
@@ -49,15 +65,9 @@
 
         <!-- Headline -->
         <h1 class="font-serif leading-[1.05] text-black">
-          <span class="block text-3xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">
-            KOUAME
-          </span>
-          <span class="block text-4xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">
-            ESTHER EDWIGE
-          </span>
-          <span class="block text-2xl sm:text-3xl lg:text-[46px] mt-5 text-gray-700">
-            Développeuse Full Stack
-          </span>
+          <span class="block text-3xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">KOUAME</span>
+          <span class="block text-4xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">ESTHER EDWIGE</span>
+          <span class="block text-2xl sm:text-3xl lg:text-[46px] mt-5 text-gray-700">Développeuse Full Stack</span>
         </h1>
 
         <!-- Description -->
@@ -69,10 +79,7 @@
 
         <!-- Actions -->
         <div class="flex items-center gap-10 mt-16">
-          <a
-            href="#projects"
-            class="bg-black text-white px-14 py-4 text-xs tracking-[0.35em] uppercase hover:opacity-90 transition"
-          >
+          <a href="#projects" class="bg-black text-white px-14 py-4 text-xs tracking-[0.35em] uppercase hover:opacity-90 transition">
             Découvrir mes projets
           </a>
 
@@ -93,57 +100,39 @@
       </div>
 
       <!-- RIGHT -->
-     <div class="relative flex justify-center lg:justify-end -mt-16">
+      <div class="relative flex justify-center lg:justify-end -mt-16">
 
-     <!-- Image -->
-        <img src="/assets/edo.png" alt="Développeuse full stack" class="w-[380px] sm:w-[420px] lg:w-[470px] h-[560px] sm:h-[620px] lg:h-[660px] object-cover rounded-xl
-              drop-shadow-sm
-              contrast-100
-              saturate-100
-              transition-transform duration-500 ease-in-out hover:scale-105 z-0"
-      />
+        <!-- Image -->
+        <img src="/assets/edo.png" alt="Développeuse full stack" class="w-[380px] sm:w-[420px] lg:w-[470px] h-[560px] sm:h-[620px] lg:h-[660px] object-cover rounded-xl drop-shadow-sm contrast-100 saturate-100 transition-transform duration-500 ease-in-out hover:scale-105 z-0"/>
 
-      <!-- Halo au-dessus de l'image -->
-      <div class="absolute -top-12 -right-8 w-52 h-52 rounded-full bg-[#F5D7A1] flex items-center justify-center opacity-80 z-10">
-        <div class="w-36 h-36 rounded-full border border-black/70"></div>
+        <!-- Halo au-dessus de l'image -->
+        <div class="absolute -top-12 -right-8 w-52 h-52 rounded-full bg-[#F5D7A1] flex items-center justify-center opacity-80 z-10">
+          <div class="w-36 h-36 rounded-full border border-black/70"></div>
+        </div>
+
+        <!-- Floating dots -->
+        <div class="absolute top-44 left-[480px] hidden lg:block text-lg opacity-40">• • •</div>
+
+        <!-- Quote partiellement sur l'image -->
+        <div class="absolute -bottom-8 right-4 bg-black text-white px-14 py-7 italic text-sm shadow-2xl max-w-sm z-20">
+          “Je transforme les idées en code propre, fiable et joyeux.”
+        </div>
+
+        <!-- Vertical line -->
+        <span class="absolute right-[-36px] bottom-[-36px] w-[2px] h-44 bg-black hidden lg:block"></span>
+
       </div>
-
-      <!-- Floating dots -->
-      <div class="absolute top-44 left-[480px] hidden lg:block text-lg opacity-40">
-        • • •
-      </div>
-
-      <!-- Quote partiellement sur l'image -->
-      <div class="absolute -bottom-8 right-4 bg-black text-white px-14 py-7 italic text-sm shadow-2xl max-w-sm z-20">
-        “Je transforme les idées en code propre, fiable et joyeux.”
-      </div>
-
-      <!-- Vertical line -->
-      <span class="absolute right-[-36px] bottom-[-36px] w-[2px] h-44 bg-black hidden lg:block"></span>
-
-     </div>
-
 
     </main>
   </div>
 </section>
 
-
-
-
 <!-- ================= PROFILE ================= -->
-<section
-  id="profile"
-  class="relative min-h-screen flex items-center bg-cover bg-center"
-  style="background-image: url('/assets/dev3.jpeg');"
->
+<section id="profile" class="relative min-h-screen flex items-center bg-cover bg-center" style="background-image: url('/assets/dev3.jpeg');">
   <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-indigo-900/50"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 text-white">
-
-    <span class="inline-block mb-6 px-5 py-2 text-xs tracking-widest uppercase rounded-full bg-white/10 backdrop-blur border border-white/20">
-      Profil professionnel
-    </span>
+    <span class="inline-block mb-6 px-5 py-2 text-xs tracking-widest uppercase rounded-full bg-white/10 backdrop-blur border border-white/20">Profil professionnel</span>
 
     <p class="mt-8 text-gray-200 leading-relaxed max-w-2xl text-lg">
       Je conçois des applications web modernes, performantes et maintenables,
@@ -151,327 +140,291 @@
     </p>
 
     <div class="mt-10">
-      <a
-        href="/assets/cv.pdf"
-        class="px-8 py-4 rounded-xl bg-white/10 backdrop-blur border border-white/20 hover:bg-white/20 transition"
-      >
+      <a href="/assets/cv.pdf" class="px-8 py-4 rounded-xl bg-white/10 backdrop-blur border border-white/20 hover:bg-white/20 transition">
         Télécharger CV
       </a>
     </div>
 
     <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        <!-- EXPERIENCES -->
-
-        <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-red-400/50 hover:shadow-[0_0_40px_rgba(239,68,68,0.25)] transition">
-
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-red-300">
-
-        Expériences
-
-        </h3>
-
+      <!-- EXPERIENCES PROFESSIONNELLES -->
+      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-red-400/50 hover:shadow-[0_0_40px_rgba(239,68,68,0.25)] transition">
+        <h3 class="uppercase tracking-widest text-sm mb-6 text-red-300">Expériences Professionnelles</h3>
         <ul class="space-y-6 text-sm text-gray-200">
-
-        <li>
-
-        <p class="font-semibold text-white">
-
-        Ingénieure Informaticienne Front Office
-
-        </p>
-
-        <p>Huawei Technologies — Abidjan</p>
-
-        <span class="text-xs text-gray-400">
-
-        Depuis août 2025
-
-        </span>
-
-        <ul class="mt-3 list-disc list-inside text-xs space-y-1">
-
-        <li>Supervision RAN (2G/3G/4G)</li>
-
-        <li>Gestion alarmes critiques NOC</li>
-
-        <li>Coordination terrain & back-office</li>
-
+          <li>
+            <p class="font-semibold text-white">Ingénieure Informaticienne Front Office</p>
+            <p>Huawei Technologies — Abidjan</p>
+            <span class="text-xs text-gray-400">Depuis août 2025 (4 mois)</span>
+            <ul class="mt-3 list-disc list-inside text-xs space-y-1">
+              <li>Supervision RAN (2G/3G/4G)</li>
+              <li>Gestion alarmes critiques NOC</li>
+              <li>Coordination terrain & back-office</li>
+            </ul>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Développeuse Full Stack Junior</p>
+            <p>JARS Technologies International</p>
+            <span class="text-xs text-gray-400">Mar 2024 – Nov 2024 (8 mois)</span>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Stage / Junior Developer</p>
+            <p>Entreprise XYZ</p>
+            <span class="text-xs text-gray-400">Mar 2022 – Avr 2023 (1 an)</span>
+          </li>
         </ul>
+      </div>
 
-        </li>
-
-        <li>
-
-        <p class="font-semibold text-white">
-
-        Développeuse Full Stack Junior
-
-        </p>
-
-        <p>JARS Technologies International</p>
-
-        <span class="text-xs text-gray-400">
-
-        Mar 2024 – Nov 2024
-
-        </span>
-
-        </li>
-
-        </ul>
-
-        </div>
-
-        <!-- DIPLOMES -->
-
-        <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.25)] transition">
-
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-indigo-300">
-
-        Diplômes
-
-        </h3>
-
+      <!-- DIPLOMES -->
+      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.25)] transition">
+        <h3 class="uppercase tracking-widest text-sm mb-6 text-indigo-300">Diplômes</h3>
         <ul class="space-y-6 text-sm text-gray-200">
-
-        <li>
-
-        <p class="font-semibold text-white">
-
-        Master 1 Génie Logiciel
-
-        </p>
-
-        <p>ALT-ISTEA Yopougon</p>
-
-        <span class="text-xs text-gray-400">
-
-        2022 – 2023
-
-        </span>
-
-        </li>
-
-        <li>
-
-        <p class="font-semibold text-white">
-
-        Licence Professionnelle Génie Logiciel
-
-        </p>
-
-        <p>ALT ISTEA Plateau</p>
-
-        <span class="text-xs text-gray-400">
-
-        2020 – 2021
-
-        </span>
-
-        </li>
-
+          <li>
+            <p class="font-semibold text-white">Master 1 Génie Logiciel</p>
+            <p>ALT-ISTEA Yopougon</p>
+            <span class="text-xs text-gray-400">Déc 2022 – Août 2023</span>
+          </li>
+          <li>
+            <p class="font-semibold text-white">Licence Professionnelle Génie Logiciel</p>
+            <p>ALT ISTEA Plateau</p>
+            <span class="text-xs text-gray-400">Déc 2020 – Juil 2021</span>
+          </li>
+          <li>
+            <p class="font-semibold text-white">DUT / BTS Informatique</p>
+            <p>Établissement XYZ</p>
+            <span class="text-xs text-gray-400">Oct 2015 – Juil 2016</span>
+          </li>
         </ul>
+      </div>
 
+      <!-- COMPETENCES TECHNIQUES -->
+      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:shadow-[0_0_40px_rgba(52,211,153,0.25)] transition">
+        <h3 class="uppercase tracking-widest text-sm mb-6 text-emerald-300">Compétences & Outils</h3>
+
+        <!-- TELECOM & RESEAU MOBILE -->
+        <div class="mb-4">
+          <h4 class="font-semibold text-white mb-2">TELECOM & RESEAU MOBILE</h4>
+          <ul class="list-disc list-inside text-xs text-gray-200 space-y-1">
+            <li>RAN (2G/3G/4G)</li>
+            <li>Huawei/Ericsson</li>
+            <li>NOC Front Office Operations</li>
+            <li>Transmission MW, Fibre Optique, IP/MPLS</li>
+            <li>Monitoring & Alarm Management</li>
+          </ul>
         </div>
 
-        <!-- COMPETENCES -->
-
-        <div
-
-        class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl
-
-        border border-white/10 hover:border-emerald-400/50
-
-        hover:shadow-[0_0_40px_rgba(52,211,153,0.25)] transition"
-
-        >
-
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-emerald-300">
-
-        Compétences
-
-        </h3>
-
-        <div class="flex flex-wrap gap-3 text-xs">
-
-        <span class="px-4 py-1 rounded-full bg-red-500/20">Angular</span>
-
-        <span class="px-4 py-1 rounded-full bg-indigo-500/20">Laravel</span>
-
-        <span class="px-4 py-1 rounded-full bg-blue-500/20">Tailwind CSS</span>
-
-        <span class="px-4 py-1 rounded-full bg-indigo-500/20">PrimeNG</span>
-
-        <span class="px-4 py-1 rounded-full bg-emerald-500/20">Flutter</span>
-
-        <span class="px-4 py-1 rounded-full bg-emerald-500/20">Python</span>
-
+        <!-- FRAMEWORK -->
+        <div class="mb-4">
+          <h4 class="font-semibold text-white mb-2">FRAMEWORK</h4>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-white">Laravel</span>
+            <span class="px-3 py-1 rounded-full bg-red-500/20 text-white">Angular</span>
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-white">Bootstrap</span>
+            <span class="px-3 py-1 rounded-full bg-teal-500/20 text-white">Tailwind CSS</span>
+            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-white">PrimeNG</span>
+            <span class="px-3 py-1 rounded-full bg-pink-500/20 text-white">PrimeFlex</span>
+          </div>
         </div>
 
+        <!-- OUTILS / BASE DE DONNEE / BACKEND / FRONTEND -->
+        <div class="mb-2">
+          <h4 class="font-semibold text-white mb-2">OUTILS</h4>
+          <p class="text-xs text-gray-200">Git/GitHub, Postman, VS Code, IntelliJ IDEA, WebStorm, Bitbucket</p>
         </div>
+
+        <div class="mb-2">
+          <h4 class="font-semibold text-white mb-2">BASE DE DONNEE</h4>
+          <p class="text-xs text-gray-200">MySQL</p>
+        </div>
+
+        <div class="mb-2">
+          <h4 class="font-semibold text-white mb-2">BACKEND</h4>
+          <p class="text-xs text-gray-200">PHP, JAVA</p>
+        </div>
+
+        <div class="mb-2">
+          <h4 class="font-semibold text-white mb-2">FRONTEND</h4>
+          <p class="text-xs text-gray-200">HTML5, CSS3, JavaScript (JQuery), TypeScript</p>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
 <section id="projects" class="bg-[#EFEAE3] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-16">
-
-    <h2 class="font-serif text-4xl md:text-6xl mb-16 md:mb-20">
-      Projets <br />
-      <span class="text-2xl md:text-4xl">Vedette</span>
-    </h2>
+    <h2 class="font-serif text-4xl md:text-6xl mb-16 md:mb-20">Projets <br /><span class="text-2xl md:text-4xl">Vedette</span></h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
 
-          <!-- Gestion de Tontine -->
-          <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-            <div>
-              <h3 class="font-serif text-2xl mb-4">
-                Application de Gestion de Tontine
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Application web permettant la gestion complète des tontines :
-                membres, cotisations, suivi des contributions et historique
-                des transactions.
-              </p>
-            </div>
+      <!-- Gestion de Tontine -->
+      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-2xl mb-4">Application de Gestion de Tontine</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Application web permettant la gestion complète des tontines :
+            membres, cotisations, suivi des contributions et historique
+            des transactions.
+          </p>
+        </div>
+        <div class="mt-6">
+          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
+          <a href="https://github.com/Esthelia/gestion_tontine/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+        </div>
+      </div>
 
-            <div class="mt-6">
-              <span class="block text-xs uppercase tracking-widest mb-4">
-                Laravel · PHP · MySQL · Bootstrap
-              </span>
-              <a
-                href="https://github.com/Esthelia/gestion_tontine/tree/master"
-                target="_blank"
-                class="text-sm underline hover:opacity-70"
-              >
-                View on GitHub →
-              </a>
-            </div>
-          </div>
+      <!-- E-commerce Restaurant -->
+      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-2xl mb-4">Gourmet Express – E-commerce Restaurant</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Site e-commerce de restauration avec authentification utilisateur,
+            panier, commandes en ligne et affichage dynamique du menu du jour.
+          </p>
+        </div>
+        <div class="mt-6">
+          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
+          <a href="https://github.com/Esthelia/gourmetExpress/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+        </div>
+      </div>
 
-          <!-- E-commerce Restaurant -->
-          <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-            <div>
-              <h3 class="font-serif text-2xl mb-4">
-                Gourmet Express – E-commerce Restaurant
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Site e-commerce de restauration avec authentification utilisateur,
-                panier, commandes en ligne et affichage dynamique du menu du jour.
-              </p>
-            </div>
+      <!-- Gestion de Marché -->
+      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-2xl mb-4">MyMarket – Gestion de Marché</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Application de gestion de marché : commerçants, emplacements,
+            paiements, suivi des opérations et options de retrait ou livraison.
+          </p>
+        </div>
+        <div class="mt-6">
+          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
+          <a href="https://github.com/Esthelia/myMarket/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+        </div>
+      </div>
 
-            <div class="mt-6">
-              <span class="block text-xs uppercase tracking-widest mb-4">
-                Laravel · PHP · MySQL · Bootstrap
-              </span>
-              <a
-                href="https://github.com/Esthelia/gourmetExpress/tree/master"
-                target="_blank"
-                class="text-sm underline hover:opacity-70"
-              >
-                View on GitHub →
-              </a>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
 
-          <!-- Gestion de Marché -->
-          <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-            <div>
-              <h3 class="font-serif text-2xl mb-4">
-                MyMarket – Gestion de Marché
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Application de gestion de marché : commerçants, emplacements,
-                paiements, suivi des opérations et options de retrait ou livraison.
-              </p>
-            </div>
+<!-- ================= MES SERVICES ================= -->
+<section id="services" class="bg-white py-24 md:py-32 reveal">
+  <div class="max-w-6xl mx-auto px-6 md:px-16">
+    <h2 class="font-serif text-4xl md:text-6xl mb-16 text-center">Mes Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            <div class="mt-6">
-              <span class="block text-xs uppercase tracking-widest mb-4">
-                Laravel · PHP · MySQL · Bootstrap
-              </span>
-              <a
-                href="https://github.com/Esthelia/myMarket/tree/master"
-                target="_blank"
-                class="text-sm underline hover:opacity-70"
-              >
-                View on GitHub →
-              </a>
-            </div>
-          </div>
+      <!-- SERVICE 1 -->
+      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
+        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
+          <img src="/assets/dev.jpg" alt="Développement Web" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <h3 class="text-2xl font-semibold mb-4">Développement Web Full Stack</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          Conception et développement d’applications web performantes et maintenables
+          en utilisant Laravel, Angular et Tailwind CSS.
+        </p>
+      </div>
+
+      <!-- SERVICE 2 -->
+      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
+        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
+          <img src="/assets/mobile.jpg" alt="Développement Mobile" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <h3 class="text-2xl font-semibold mb-4">Développement Mobile</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          Création d’applications mobiles multiplateformes avec Flutter, offrant
+          une expérience utilisateur fluide et moderne.
+        </p>
+      </div>
+
+      <!-- SERVICE 3 -->
+      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
+        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
+          <img src="/assets/telecom.jpg" alt="Télécom & Réseau" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <h3 class="text-2xl font-semibold mb-4">Télécom & Réseau</h3>
+        <p class="text-gray-600 text-sm md:text-base">
+          Expertise en réseaux mobiles (2G/3G/4G), supervision RAN, NOC Front Office,
+          transmission fibre et IP/MPLS.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================= CHIFFRES CLES ================= -->
+<section id="stats" class="bg-[#EFEAE3] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-16 text-center">
+    <h2 class="font-serif text-4xl md:text-6xl mb-16">Chiffres clés</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <span class="text-4xl md:text-5xl font-bold text-black">4+</span>
+        <p class="mt-2 text-gray-600 text-sm md:text-base">Années d’expérience</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <span class="text-4xl md:text-5xl font-bold text-black">20+</span>
+        <p class="mt-2 text-gray-600 text-sm md:text-base">Projets réalisés</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <span class="text-4xl md:text-5xl font-bold text-black">3</span>
+        <p class="mt-2 text-gray-600 text-sm md:text-base">Entreprises collaborées</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <span class="text-4xl md:text-5xl font-bold text-black">6+</span>
+        <p class="mt-2 text-gray-600 text-sm md:text-base">Technologies maîtrisées</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<!-- <section id="contact" class="bg-white py-24 md:py-32">
-  <div class="max-w-6xl mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+<section id="contact" class="bg-white py-32 relative overflow-hidden reveal-contact">
+  <!-- Bulles flottantes -->
+  <div class="absolute top-0 left-1/3 w-[150px] h-[150px] bg-blue-200 rounded-full opacity-30 animate-bounce-slow"></div>
+  <div class="absolute bottom-10 right-10 w-[100px] h-[100px] bg-pink-200 rounded-full opacity-20 animate-bounce-slow"></div>
+  <div class="absolute top-20 right-1/4 w-[80px] h-[80px] bg-yellow-200 rounded-full opacity-25 animate-bounce-slow"></div>
 
-    <div>
-      <h2 class="font-serif text-4xl md:text-6xl leading-tight">
-        Travaillons <br />
-        <span class="text-3xl md:text-5xl">ensemble</span>
-      </h2>
+  <!-- Frame autour de la section -->
+  <span class="absolute inset-0 border-2 border-gray-300 rounded-3xl pointer-events-none animate-pulse-frame"></span>
 
-      <p class="mt-8 text-gray-600 max-w-md leading-relaxed">
-        Un projet, une idée ou simplement envie d’échanger ?
-        Je suis ouverte à de nouvelles collaborations.
-      </p>
-    </div>
+  <div class="absolute top-20 right-1/25 w-[80px] h-[40px] bg-orange-200 rounded-full opacity-25 animate-bounce-slow"></div>
+  <div class="absolute top-20 right-1/12 w-[80px] h-[100px] bg-red-200 rounded-full opacity-25 animate-bounce-slow"></div>
+  <div class="absolute top-20 right-1/8 w-[80px] h-[10px] bg-gray-500 rounded-full opacity-25 animate-bounce-slow"></div>
 
-    <form class="flex flex-col gap-6" (ngSubmit)="sendMessage()">
-      <input type="text" placeholder="Votre nom & prénom"
-        class="border-b border-black py-3 focus:outline-none"
-        [(ngModel)]="form.name" name="name" required />
-
-      <input type="email" placeholder="Votre email"
-        class="border-b border-black py-3 focus:outline-none"
-        [(ngModel)]="form.email" name="email" required />
-
-      <textarea rows="4" placeholder="Votre message"
-        class="border-b border-black py-3 focus:outline-none resize-none"
-        [(ngModel)]="form.message" name="message" required></textarea>
-
-      <button type="submit"
-        class="mt-8 w-fit bg-black text-white px-10 py-4 text-sm tracking-widest">
-        ENVOYER UN MESSAGE
-      </button>
-    </form>
-  </div>
-</section> -->
-
-<section id="contact" class="bg-white py-24 md:py-32">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-
-    <h2 class="font-serif text-4xl md:text-6xl leading-tight">
+  <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+    <h2 class="font-serif text-4xl md:text-6xl leading-tight contact-title opacity-0">
       Travaillons <br />
       <span class="text-3xl md:text-5xl text-gray-700">ensemble</span>
     </h2>
-
-    <p class="mt-8 text-gray-600 leading-relaxed text-lg md:text-xl">
+    <p class="mt-8 text-gray-600 leading-relaxed text-lg md:text-xl contact-text opacity-0">
       Un projet, une idée ou simplement envie d’échanger ?<br>
       Je suis ouverte à de nouvelles collaborations.
     </p>
 
-    <!-- Bouton noir avec flèche et effet hover -->
     <a href="mailto:ton.email@example.com"
        class="mt-12 inline-flex items-center justify-center gap-3 bg-black text-white font-semibold px-14 py-4 rounded-full shadow-lg 
-              hover:bg-gray-800 hover:scale-105 transform transition-all duration-300 group relative overflow-hidden">
+              hover:bg-gray-800 hover:scale-105 transform transition-all duration-300 group relative overflow-hidden contact-btn opacity-0">
 
       <span class="relative z-10">Me contacter</span>
       <span class="relative z-10 text-xl">→</span>
 
-      <!-- Effet de lumière au survol -->
       <span class="absolute inset-0 bg-white opacity-10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></span>
     </a>
-
   </div>
 </section>
- 
+
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-[#EFEAE3] py-8">
@@ -483,3 +436,4 @@
     </span>
   </div>
 </footer>
+

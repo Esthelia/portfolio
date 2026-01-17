@@ -3,3 +3,27 @@
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
   body { font-feature-settings: "liga" 1; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade {
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+
+
+    /* Bulles flottantes */
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    60% { transform: translateY(-20px); }
+  }
+  .animate-bounce-slow { animation: bounce-slow 6s ease-in-out infinite; }
+
+  /* Frame animée */
+  @keyframes pulse-frame {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    80% { opacity: 0.6; transform: scale(1.02); }
+  }
+  .animate-pulse-frame { animation: pulse-frame 10s ease-in-out infinite; }

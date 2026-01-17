@@ -6,11 +6,113 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- index.html -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS & Anime.js -->
+  <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
-<body>
+
+<body class="font-sans overflow-x-hidden">
   <app-root></app-root>
+
+
+
+   
+  <!-- ================= JAVASCRIPT ================= -->
+<script>
+// Loader
+anime({
+  targets: '#loader-bar',
+  width: ['0%', '100%'],
+  duration: 1500,
+  easing: 'easeInOutQuad',
+  complete: () => {
+    anime({
+      targets: '#loader',
+      opacity: 0,
+      duration: 600,
+      complete: () => loader.remove()
+    });
+  }
+});
+
+// Reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      anime({
+        targets: entry.target,
+        opacity:[0,1],
+        translateY:[40,0],
+        duration:1000,
+        easing:'easeOutExpo'
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.2});
+
+document.querySelectorAll('.reveal,.reveal-card').forEach(el=>observer.observe(el));
+
+// Menu
+function openMenu(){
+  anime({targets:'#mobileMenu',opacity:[0,1],duration:300});
+  mobileMenu.classList.remove('pointer-events-none');
+}
+function closeMenu(){
+  anime({targets:'#mobileMenu',opacity:[1,0],duration:300});
+  mobileMenu.classList.add('pointer-events-none');
+}
+
+// Parallax
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('[data-parallax]').forEach(el=>{
+    el.style.transform=`translateY(${window.scrollY*0.15}px)`;
+  });
+});
+</script>
+ 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          anime({
+            targets: '.contact-title',
+            opacity: [0,1],
+            translateY: [50,0],
+            duration: 1000,
+            easing: 'easeOutExpo'
+          });
+          anime({
+            targets: '.contact-text',
+            opacity: [0,1],
+            translateY: [50,0],
+            duration: 1000,
+            delay: 200,
+            easing: 'easeOutExpo'
+          });
+          anime({
+            targets: '.contact-btn',
+            opacity: [0,1],
+            translateY: [50,0],
+            duration: 1000,
+            delay: 400,
+            easing: 'easeOutExpo'
+          });
+
+          contactObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.2});
+
+    document.querySelectorAll('.reveal-contact').forEach(el => contactObserver.observe(el));
+  });
+</script>
+
 </body>
 </html>
