@@ -1,0 +1,113 @@
+// header
+/* Base des boutons du menu */
+  .nav-btn {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b; /* Gris ardoise */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+  }
+
+  /* Effet de survol doux */
+  .nav-btn:hover {
+    color: #db2777; /* Rose foncé */
+    background-color: #fff1f2; /* Fond rose très léger */
+  }
+
+  /* ASTUCE SANS JS : Utilisation de :focus ou de classes manuelles par page */
+  /* Si tu es sur une seule page (Single Page Application), 
+     on simule l'actif avec :focus ou en ajoutant la classe manuellement sur chaque page HTML */
+  
+  .nav-btn:focus, 
+  .active-pink {
+    color: #db2777 !important;
+    background-color: #fce7f3 !important; /* Rose clair permanent */
+    box-shadow: 0 4px 12px rgba(219, 39, 119, 0.15);
+  }
+
+  /* Petit trait indicateur animé sous le bouton focus */
+  .nav-btn:focus::after,
+  .active-pink::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #db2777;
+    border-radius: 10px;
+  }
+
+
+//hero
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+      .stroke-text {
+        color: transparent;
+      }
+
+// profile
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    #profile { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+
+
+// projects
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+    #projects { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    
+    /* Animation de flottement doux pour les images */
+    @keyframes floatProj {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    .group:hover .relative.overflow-hidden {
+        animation: floatProj 4s ease-in-out infinite;
+    }
+
+
+// service
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap');
+  
+  #services { font-family: 'Plus Jakarta Sans', sans-serif; }    
+
+
+// states
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Inter:wght@900&display=swap');
+  
+  #stats h3 { font-family: 'Inter', sans-serif; }
+  #stats .font-serif { font-family: 'Playfair Display', serif; }  
+
+
+
+// contact
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Montserrat:wght@300;700;900&display=swap');
+  
+  #contact { font-family: 'Montserrat', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }

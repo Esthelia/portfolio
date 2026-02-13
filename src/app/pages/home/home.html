@@ -27,408 +27,676 @@
   <div class="w-[94%] max-w-[1500px] bg-white relative overflow-hidden">
 
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-black/5">
-      <nav class="flex items-center justify-between px-6 md:px-16 py-5 max-w-[1500px] mx-auto">
+   <header class="fixed top-0 left-0 w-full z-50 flex justify-center pt-4">
+  <nav class="bg-white/90 backdrop-blur-xl border border-pink-100 shadow-[0_10px_30px_-10px_rgba(244,114,182,0.3)] px-6 py-2 rounded-2xl flex items-center justify-between w-[90%] max-w-[1200px]">
+    
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center shadow-lg shadow-pink-200">
+        <span class="text-white font-bold text-sm">EK</span>
+      </div>
+      <span class="hidden sm:block font-extrabold text-gray-800 tracking-tight">Esther<span class="text-pink-500">.</span>K</span>
+    </div>
 
-        <!-- Logo KEE -->
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
-            <span class="text-white text-lg font-bold tracking-widest">KEE</span>
-          </div>
-          <span class="hidden sm:block text-xs tracking-[0.35em] uppercase font-medium">Esther Kouame</span>
-        </div>
+    <ul class="flex items-center gap-1">
+      <li>
+        <a href="#home" class="nav-btn active-pink">Accueil</a>
+      </li>
+      <li>
+        <a href="#profile" class="nav-btn">Profil</a>
+      </li>
+      <li>
+        <a href="#projects" class="nav-btn">Projets</a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-btn">Contact</a>
+      </li>
+    </ul>
 
-        <!-- Menu -->
-        <ul class="hidden md:flex items-center gap-14 text-xs tracking-[0.25em] uppercase">
-          <li><a href="#home" class="relative after:absolute after:left-0 after:-bottom-3 after:w-full after:h-[2px] after:bg-black">Accueil</a></li>
-          <li><a href="#profile" class="hover:opacity-60 transition">Profil</a></li>
-          <li><a href="#projects" class="hover:opacity-60 transition">Projets</a></li>
-           <li><a href="#services" class="hover:opacity-60 transition">Services</a></li>
-          <li><a href="#contact" class="hover:opacity-60 transition">Contact</a></li>
-        </ul>
+    <a href="#hire" class="hidden md:block bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-tighter transition-all hover:scale-105 active:scale-95">
+      Engagez-moi
+    </a>
+  </nav>
+</header>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden text-3xl" onclick="openMenu()">☰</button>
-
-        <!-- CTA -->
-        <a href="#contact" class="hidden md:block bg-black text-white px-8 py-3 rounded-full text-xs tracking-[0.3em] uppercase shadow-lg hover:translate-y-[-2px] transition">Engagez-moi</a>
-      </nav>
-    </header>
 
     <!-- HERO -->
-    <main class="grid grid-cols-1 lg:grid-cols-2 gap-28 px-6 md:px-16 lg:px-24 pt-48 pb-36 relative">
-
-      <!-- LEFT -->
-      <div class="flex flex-col justify-center relative">
-
-        <!-- Vertical accent -->
-        <span class="absolute left-[-36px] top-10 w-[6px] h-40 bg-black hidden lg:block"></span>
-
-        <!-- Headline -->
-        <h1 class="font-serif leading-[1.05] text-black">
-          <span class="block text-3xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">KOUAME</span>
-          <span class="block text-4xl sm:text-5xl lg:text-[76px] font-bold tracking-tight">ESTHER EDWIGE</span>
-          <span class="block text-2xl sm:text-3xl lg:text-[46px] mt-5 text-gray-700">Développeuse Full Stack</span>
-        </h1>
-
-        <!-- Description -->
-        <p class="mt-14 text-gray-600 max-w-xl leading-relaxed text-[15px]">
-          Je crée des expériences digitales élégantes et performantes.
-          Du concept à la production, j’allie esthétique, performance
-          et fiabilité pour donner vie à des produits durables.
+   <main class="relative min-h-screen flex items-center bg-[#fafafa] overflow-hidden font-sans">
+  
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-[#c2515d]/5 -skew-x-12 translate-x-20 z-0"></div>
+  <div class="absolute top-20 left-10 w-4 h-4 rounded-full bg-[#ff9e7d] animate-ping"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+    
+    <div class="lg:col-span-7 py-12">
+      <div class="inline-block px-5 py-2 bg-white border-l-4 border-[#c2515d] shadow-sm mb-6">
+        <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500">
+          Innovation & <span class="text-[#c2515d]">Infrastructure</span>
         </p>
+      </div>
 
-        <!-- Actions -->
-        <div class="flex items-center gap-10 mt-16">
-          <a href="#projects" class="bg-black text-white px-14 py-4 text-xs tracking-[0.35em] uppercase hover:opacity-90 transition">
-            Découvrir mes projets
-          </a>
+      <h1 class="text-6xl md:text-8xl font-black leading-[0.85] tracking-tighter uppercase mb-6">
+        <span class="text-gray-900">Esther</span><br>
+        <span class="text-transparent stroke-text" style="-webkit-text-stroke: 1px #c2515d;">Edwige</span><br>
+        <span class="text-[#c2515d]">Kouame.</span>
+      </h1>
 
-          <div class="flex flex-col items-center text-xs tracking-[0.3em] text-gray-500">
-            <span>Scroll</span>
-            <span class="mt-2">↓</span>
-          </div>
+      <p class="text-lg md:text-xl text-gray-600 max-w-lg mb-10 font-light leading-relaxed">
+        Double expertise en <strong class="text-gray-900">Génie Logiciel</strong> et <strong class="text-gray-900">Réseaux Télécom</strong>. 
+        Je conçois des solutions où la performance backend rencontre l'élégance frontend.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="#projects" class="group relative px-10 py-5 bg-black text-white rounded-lg overflow-hidden transition-all shadow-2xl">
+          <div class="absolute inset-0 w-0 bg-[#c2515d] transition-all duration-300 group-hover:w-full"></div>
+          <span class="relative z-10 text-[11px] font-black uppercase tracking-widest">Voir mes réalisations</span>
+        </a>
+
+        <div class="flex gap-3">
+            <a href="mailto:estheredwige98@gmail.com" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#ff9e7d] hover:text-white hover:border-transparent transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </a>
+            <a href="https://linkedin.com/in/votre-profil" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#c2515d] hover:text-white hover:border-transparent transition-all">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative">
+      
+      <div class="relative group">
+        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-[#ff9e7d]/20 rounded-[4rem] rotate-12 -z-10 group-hover:rotate-0 transition-transform duration-700"></div>
+
+        <div class="relative rounded-[2rem] overflow-hidden border-[10px] border-white shadow-[0_40px_80px_rgba(0,0,0,0.15)]">
+            <img src="/assets/edo.png" alt="Esther Kouame Portfolio" class="w-full h-[550px] object-cover contrast-110 saturate-105 group-hover:scale-105 transition-all duration-700">
+            
+            <div class="absolute top-6 left-6 px-4 py-3 bg-white/90 backdrop-blur rounded-2xl shadow-xl flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#c2515d] rounded-xl flex items-center justify-center text-white font-black italic">H</div>
+                <div>
+                    <p class="text-[9px] font-bold text-gray-400 uppercase leading-none">Actuellement chez</p>
+                    <p class="text-[11px] font-black text-gray-900 uppercase">Huawei Tech</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Decorative dots -->
-        <div class="flex gap-3 mt-28 text-xl opacity-50">• • •</div>
-
-        <!-- Baseline line -->
-        <div class="mt-10 relative">
-          <div class="h-px bg-black w-96"></div>
-          <span class="absolute -bottom-[3px] left-0 w-20 h-[6px] bg-black"></span>
+        <div class="absolute -right-12 bottom-12 bg-white p-6 rounded-3xl shadow-2xl border border-gray-50 max-w-[200px] animate-float">
+            <h4 class="text-[10px] font-black text-[#c2515d] uppercase tracking-widest mb-3">Top Stack</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 rounded-md text-[9px] font-bold text-gray-600">LARAVEL</span>
+                <span class="px-3 py-1 bg-gray-100 rounded-md text-[9px] font-bold text-gray-600">FLUTTER</span>
+                <span class="px-3 py-1 bg-gray-900 rounded-md text-[9px] font-bold text-white uppercase tracking-tighter">RAN 4G</span>
+            </div>
         </div>
       </div>
 
-      <!-- RIGHT -->
-      <div class="relative flex justify-center lg:justify-end -mt-16">
-
-        <!-- Image -->
-        <img src="/assets/edo.png" alt="Développeuse full stack" class="w-[380px] sm:w-[420px] lg:w-[470px] h-[560px] sm:h-[620px] lg:h-[660px] object-cover rounded-xl drop-shadow-sm contrast-100 saturate-100 transition-transform duration-500 ease-in-out hover:scale-105 z-0"/>
-
-        <!-- Halo au-dessus de l'image -->
-        <div class="absolute -top-12 -right-8 w-52 h-52 rounded-full bg-[#F5D7A1] flex items-center justify-center opacity-80 z-10">
-          <div class="w-36 h-36 rounded-full border border-black/70"></div>
-        </div>
-
-        <!-- Floating dots -->
-        <div class="absolute top-44 left-[480px] hidden lg:block text-lg opacity-40">• • •</div>
-
-        <!-- Quote partiellement sur l'image -->
-        <div class="absolute -bottom-8 right-4 bg-black text-white px-14 py-7 italic text-sm shadow-2xl max-w-sm z-20">
-          “Je transforme les idées en code propre, fiable et joyeux.”
-        </div>
-
-        <!-- Vertical line -->
-        <span class="absolute right-[-36px] bottom-[-36px] w-[2px] h-44 bg-black hidden lg:block"></span>
-
+      <div class="absolute -bottom-6 -left-12 bg-[#c2515d] p-6 rounded-2xl shadow-2xl max-w-[220px] rotate-[-5deg]">
+          <p class="text-white text-xs font-medium italic leading-relaxed">
+            "Ma passion : transformer des réseaux complexes en lignes de code simples."
+          </p>
       </div>
+    </div>
 
-    </main>
+  </div>
+
+    <div class="absolute bottom-10 left-10 flex items-center gap-4 opacity-30">
+        <span class="text-[10px] font-black tracking-[0.5em] uppercase">Abidjan</span>
+        <span class="h-px w-20 bg-gray-400"></span>
+        <span class="text-[10px] font-black tracking-[0.5em] uppercase">2026</span>
+    </div>
+   </main>
+
+
   </div>
 </section>
 
 <!-- ================= PROFILE ================= -->
-<section id="profile" class="relative min-h-screen flex items-center bg-cover bg-center" style="background-image: url('/assets/dev3.jpeg');">
-  <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-indigo-900/50"></div>
+<section id="profile" class="relative py-24 bg-[#fffcf9] overflow-hidden font-sans">
+  
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#4a3f35 1.5px, transparent 1.5px); background-size: 30px 30px;"></div>
+  <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-[#c2515d]/10 rounded-full blur-[120px]"></div>
+  <div class="absolute top-[20%] -right-[5%] w-[30%] h-[50%] bg-[#F5D7A1]/20 rounded-full blur-[100px] rotate-45"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 text-white">
-    <span class="inline-block mb-6 px-5 py-2 text-xs tracking-widest uppercase rounded-full bg-white/10 backdrop-blur border border-white/20">Profil professionnel</span>
-
-    <p class="mt-8 text-gray-200 leading-relaxed max-w-2xl text-lg">
-      Je conçois des applications web modernes, performantes et maintenables,
-      en combinant expertise télécom et développement logiciel.
-    </p>
-
-    <div class="mt-10">
-      <a href="/assets/cv.pdf" class="px-8 py-4 rounded-xl bg-white/10 backdrop-blur border border-white/20 hover:bg-white/20 transition">
-        Télécharger CV
-      </a>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-[2px] bg-[#c2515d]"></span>
+          <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[#c2515d]">Identity Architecture</span>
+        </div>
+        <h2 class="text-6xl md:text-[8rem] font-serif text-[#4a3f35] leading-[0.85] tracking-tighter">
+          Esther <br>
+          <span class="italic text-[#c2515d] font-light ml-4 md:ml-20">Edwige.</span>
+        </h2>
+      </div>
+      
+      <div class="flex flex-col items-end gap-6">
+        <p class="text-[10px] font-bold text-[#4a3f35]/40 uppercase tracking-widest text-right">Basée à Abidjan, CI <br> Ingénieure Fullstack & Télécoms</p>
+        <a href="/assets/CV_Esther_KOUAME.pdf" class="group relative overflow-hidden bg-[#4a3f35] text-white px-10 py-5 rounded-2xl transition-all duration-500 hover:shadow-[0_20px_40px_-10px_rgba(74,63,53,0.3)] hover:-translate-y-1">
+          <div class="absolute inset-0 bg-[#c2515d] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+          <div class="relative flex items-center gap-4">
+            <span class="text-[10px] font-black uppercase tracking-widest">Dossier de compétences</span>
+            <svg class="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-      <!-- EXPERIENCES PROFESSIONNELLES -->
-      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-red-400/50 hover:shadow-[0_0_40px_rgba(239,68,68,0.25)] transition">
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-red-300">Expériences Professionnelles</h3>
-        <ul class="space-y-6 text-sm text-gray-200">
-          <li>
-            <p class="font-semibold text-white">Ingénieure Informaticienne Front Office</p>
-            <p>Huawei Technologies — Abidjan</p>
-            <span class="text-xs text-gray-400">Depuis août 2025</span>
-            <ul class="mt-3 list-disc list-inside text-xs space-y-1">
-              <li>Supervision RAN (2G/3G/4G)</li>
-              <li>Gestion alarmes critiques NOC</li>
-              <li>Coordination terrain & back-office</li>
-            </ul>
-          </li>
-          <li>
-            <p class="font-semibold text-white">Développeuse Full Stack Junior</p>
-            <p>JARS Technologies International</p>
-            <span class="text-xs text-gray-400">Mar 2024 – Nov 2024 (8 mois)</span>
-          </li>
-          <li>
-            <p class="font-semibold text-white">Stage / Junior Developer</p>
-            <p>Oxiane Cote D'Ivoire</p>
-            <span class="text-xs text-gray-400">Mar 2022 – Avr 2023 (1 an)</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- DIPLOMES -->
-      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.25)] transition">
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-indigo-300">Diplômes</h3>
-        <ul class="space-y-6 text-sm text-gray-200">
-          <li>
-            <p class="font-semibold text-white">Master 1 Génie Logiciel</p>
-            <p>ALT-ISTEA Yopougon</p>
-            <span class="text-xs text-gray-400">Déc 2022 – Août 2023</span>
-          </li>
-          <li>
-            <p class="font-semibold text-white">Licence Professionnelle Génie Logiciel</p>
-            <p>ALT ISTEA Plateau</p>
-            <span class="text-xs text-gray-400">Déc 2020 – Juil 2021</span>
-          </li>
-          <li>
-            <p class="font-semibold text-white">BAC / Baccalaureat serie D</p>
-            <p>Lycee Municipal de Jacqueville</p>
-            <span class="text-xs text-gray-400">Oct 2015 – Juil 2016</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- COMPETENCES TECHNIQUES -->
-      <div class="group bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:shadow-[0_0_40px_rgba(52,211,153,0.25)] transition">
-        <h3 class="uppercase tracking-widest text-sm mb-6 text-emerald-300">Compétences & Outils</h3>
-
-        <!-- TELECOM & RESEAU MOBILE -->
-        <div class="mb-4">
-          <h4 class="font-semibold text-white mb-2">TELECOM & RESEAU MOBILE</h4>
-          <ul class="list-disc list-inside text-xs text-gray-200 space-y-1">
-            <li>RAN (2G/3G/4G)</li>
-            <li>Huawei/Ericsson</li>
-            <li>NOC Front Office Operations</li>
-            <li>Transmission MW, Fibre Optique, IP/MPLS</li>
-            <li>Monitoring & Alarm Management</li>
-          </ul>
-        </div>
-
-        <!-- FRAMEWORK -->
-        <div class="mb-4">
-          <h4 class="font-semibold text-white mb-2">FRAMEWORK</h4>
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-white">Laravel</span>
-            <span class="px-3 py-1 rounded-full bg-red-500/20 text-white">Angular</span>
-            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-white">Bootstrap</span>
-            <span class="px-3 py-1 rounded-full bg-teal-500/20 text-white">Tailwind CSS</span>
-            <span class="px-3 py-1 rounded-full bg-purple-500/20 text-white">PrimeNG</span>
-            <span class="px-3 py-1 rounded-full bg-pink-500/20 text-white">PrimeFlex</span>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <div class="lg:col-span-5 space-y-10">
+        <div class="relative group">
+          <div class="absolute -inset-4 border border-[#F5D7A1]/30 rounded-[3.5rem] -rotate-2 group-hover:rotate-0 transition-transform duration-700"></div>
+          
+          <div class="relative aspect-[4/5] md:aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
+            <img src="/assets/dev3.jpeg" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2s] sepia-[0.15]" alt="Portrait">
+            <div class="absolute inset-x-6 bottom-6 bg-white/80 backdrop-blur-xl p-6 rounded-[2rem] border border-white shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform">
+               <div class="flex items-center gap-4">
+                 <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                 <div>
+                   <p class="text-[9px] font-black text-[#c2515d] uppercase">Mission Actuelle</p>
+                   <p class="text-sm font-bold text-[#4a3f35]">Front Office Engineer @Huawei</p>
+                 </div>
+               </div>
+            </div>
           </div>
         </div>
 
-        <!-- OUTILS / BASE DE DONNEE / BACKEND / FRONTEND -->
-        <div class="mb-2">
-          <h4 class="font-semibold text-white mb-2">OUTILS</h4>
-          <p class="text-xs text-gray-200">Git/GitHub, Postman, VS Code, IntelliJ IDEA, WebStorm, Bitbucket</p>
-        </div>
-
-        <div class="mb-2">
-          <h4 class="font-semibold text-white mb-2">BASE DE DONNEE</h4>
-          <p class="text-xs text-gray-200">MySQL</p>
-        </div>
-
-        <div class="mb-2">
-          <h4 class="font-semibold text-white mb-2">BACKEND</h4>
-          <p class="text-xs text-gray-200">PHP, JAVA, PYTHON</p>
-        </div>
-
-        <div class="mb-2">
-          <h4 class="font-semibold text-white mb-2">FRONTEND</h4>
-          <p class="text-xs text-gray-200">HTML5, CSS3, JavaScript (JQuery), TypeScript</p>
-        </div>
-
-        <div class="mb-2">
-          <h4 class="font-semibold text-white mb-2">MOBILE</h4>
-          <p class="text-xs text-gray-200">FLUTTER</p>
+        <div class="relative pl-8 border-l-2 border-[#F5D7A1]">
+          <p class="text-2xl font-serif italic text-[#4a3f35] leading-relaxed">
+            "Je cultive la synergie entre la complexité des <span class="text-[#c2515d] not-italic font-sans font-black">flux télécoms</span> et la précision du <span class="text-[#F5D7A1] not-italic font-sans font-black underline decoration-4 underline-offset-4">code source</span>."
+          </p>
         </div>
       </div>
 
-    </div>
+      <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="md:col-span-2 bg-white p-10 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-500">
+          <div class="flex items-center justify-between mb-10">
+            <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#c2515d]">Professional Journey</h3>
+            <span class="text-[10px] text-gray-300 font-bold uppercase">Chronologie</span>
+          </div>
+          
+          <div class="space-y-8">
+            <div class="group flex gap-6">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-[#fdf8f3] border border-[#F5D7A1] flex items-center justify-center text-[#4a3f35] font-bold text-[10px] group-hover:bg-[#4a3f35] group-hover:text-white transition-colors">01</div>
+                <div class="w-[1px] h-full bg-gradient-to-b from-[#F5D7A1] to-transparent"></div>
+              </div>
+              <div class="pb-4">
+                <div class="flex items-center gap-3 mb-1">
+                  <h4 class="text-lg font-black text-[#4a3f35]">HUAWEI TECHNOLOGIES</h4>
+                  <span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 text-[8px] font-black rounded uppercase">2025-2026</span>
+                </div>
+                <p class="text-[10px] font-bold text-[#c2515d] uppercase tracking-widest mb-3">Front Office / NOC Support Specialist</p>
+                <p class="text-xs text-gray-500 leading-relaxed italic">Supervision du réseau RAN (2G/3G/4G), monitoring temps réel et gestion des alarmes critiques.</p>
+              </div>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gray-50">
+              <div class="opacity-60 hover:opacity-100 transition-opacity">
+                <p class="text-[10px] font-black text-[#F5D7A1] mb-1">2024</p>
+                <h4 class="text-sm font-bold text-[#4a3f35] uppercase">JARS Technologies</h4>
+                <p class="text-[9px] text-gray-400 font-bold uppercase">Full Stack Developer</p>
+              </div>
+              <div class="opacity-60 hover:opacity-100 transition-opacity">
+                <p class="text-[10px] font-black text-[#F5D7A1] mb-1">2022-2023</p>
+                <h4 class="text-sm font-bold text-[#4a3f35] uppercase">Oxiane Côte d'Ivoire</h4>
+                <p class="text-[9px] text-gray-400 font-bold uppercase">Software Eng. Intern</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#4a3f35] p-10 rounded-[3rem] text-white shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-white/5 rounded-full"></div>
+          <h3 class="text-[9px] font-black uppercase tracking-[0.3em] text-[#F5D7A1] mb-8">Academic History</h3>
+          <div class="space-y-6">
+            <div class="relative pl-6 border-l border-white/10">
+              <p class="text-lg font-bold leading-tight">Master 1 Génie Logiciel</p>
+              <p class="text-[10px] font-medium text-white/40 uppercase tracking-widest mt-1">ALT-ISTEA / 2023</p>
+            </div>
+            <div class="relative pl-6 border-l border-white/10">
+              <p class="text-lg font-bold leading-tight">Licence Pro</p>
+              <p class="text-[10px] font-medium text-white/40 uppercase tracking-widest mt-1">ALT-ISTEA / 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-10 rounded-[3rem] border border-gray-100 shadow-sm relative overflow-hidden">
+          <h3 class="text-[9px] font-black uppercase tracking-[0.3em] text-[#c2515d] mb-8">Skill Matrix</h3>
+          <div class="space-y-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 bg-[#fdf8f3] border border-[#F5D7A1]/30 text-[#4a3f35] rounded-xl text-[9px] font-black uppercase">Laravel</span>
+              <span class="px-4 py-2 bg-[#fdf8f3] border border-[#F5D7A1]/30 text-[#4a3f35] rounded-xl text-[9px] font-black uppercase">Angular</span>
+              <span class="px-4 py-2 bg-[#fdf8f3] border border-[#F5D7A1]/30 text-[#4a3f35] rounded-xl text-[9px] font-black uppercase">Flutter</span>
+            </div>
+            <div class="p-5 bg-gray-50 rounded-[2rem]">
+              <p class="text-[8px] font-black text-[#c2515d] uppercase mb-2">Telecom Domain</p>
+              <p class="text-[11px] text-[#4a3f35] font-bold leading-relaxed">RAN Monitoring (2G-4G), NOC Operations, Ericsson/Huawei.</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex -space-x-2">
+                <div class="w-7 h-7 rounded-full bg-[#c2515d] border-2 border-white shadow-sm flex items-center justify-center text-[6px] text-white">GIT</div>
+                <div class="w-7 h-7 rounded-full bg-[#F5D7A1] border-2 border-white shadow-sm flex items-center justify-center text-[6px] text-[#4a3f35]">SQL</div>
+                <div class="w-7 h-7 rounded-full bg-[#4a3f35] border-2 border-white shadow-sm flex items-center justify-center text-[6px] text-white">PY</div>
+              </div>
+              <span class="text-[8px] font-black text-gray-300 uppercase italic underline decoration-[#F5D7A1]">Java Stack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+
+  <div class="relative mt-32 h-32 flex flex-col items-center justify-center">
+    <div class="w-[1px] h-full bg-gradient-to-b from-transparent via-[#4a3f35]/20 to-[#c2515d]"></div>
+    <div class="absolute bg-[#fffcf9] px-6 py-2 border border-[#4a3f35]/10 rounded-full shadow-sm">
+      <span class="text-[10px] font-black uppercase tracking-[1em] text-[#4a3f35] ml-[1em]">Selected Works</span>
+    </div>
+    <div class="absolute bottom-0 w-3 h-3 bg-[#c2515d] rounded-full animate-ping"></div>
+  </div>
+
 </section>
+
+
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="bg-[#EFEAE3] py-24 md:py-32">
-  <div class="max-w-6xl mx-auto px-6 md:px-16">
-    <h2 class="font-serif text-4xl md:text-6xl mb-16 md:mb-20">Projets <br /><span class="text-2xl md:text-4xl">Vedette</span></h2>
+<section id="projects" class="relative bg-[#fffcf9] py-32 md:py-56 overflow-hidden">
+  
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none z-0">
+    <span class="text-[22vw] font-black uppercase tracking-tighter text-[#c2515d]/[0.03] select-none">Archives</span>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+  <div class="absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-transparent via-gray-100 to-transparent"></div>
+  <div class="absolute top-0 right-[10%] w-px h-full bg-gradient-to-b from-transparent via-gray-100 to-transparent"></div>
 
-      <!-- Gestion de Tontine -->
-      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-        <div>
-          <h3 class="font-serif text-2xl mb-4">Application de Gestion de Tontine</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Application web permettant la gestion complète des tontines :
-            membres, cotisations, suivi des contributions et historique
-            des transactions.
-          </p>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    
+    <div class="max-w-4xl mb-40">
+      <div class="inline-flex items-center gap-4 mb-8">
+        <span class="w-12 h-px bg-[#c2515d]"></span>
+        <span class="text-[10px] font-bold uppercase tracking-[0.6em] text-[#c2515d]">Selected Works</span>
+      </div>
+      <h2 class="text-7xl md:text-[10rem] font-serif text-gray-900 leading-[0.85] tracking-tighter mb-12">
+        Projets <br>
+        <span class="italic font-light text-[#c2515d] ml-[0.1em]">Distingués.</span>
+      </h2>
+      <p class="max-w-xl text-gray-500 text-lg md:text-xl font-light leading-relaxed font-sans pl-2 border-l-2 border-[#F5D7A1]">
+        Une fusion entre la rigueur de l'ingénierie et la pureté esthétique. Chaque ligne de code est une intention.
+      </p>
+    </div>
+
+    <div class="space-y-64">
+
+      <div class="group relative grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-1 hidden lg:block">
+            <span class="text-6xl font-serif italic text-gray-100 group-hover:text-[#F5D7A1]/40 transition-colors duration-700">01</span>
         </div>
-        <div class="mt-6">
-          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
-          <a href="https://github.com/Esthelia/gestion_tontine/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+        
+        <div class="lg:col-span-6 relative">
+            <div class="relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] transition-transform duration-1000 group-hover:scale-[1.03]">
+                <div class="aspect-[4/3] bg-[#fdfaf6] rounded-[1.5rem] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#c2515d]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="flex items-center justify-center h-full">
+                        <span class="text-[10px] font-bold uppercase tracking-[1em] text-gray-300">Fintech Architecture</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-[#F5D7A1] rounded-full -z-10 group-hover:scale-110 transition-transform duration-1000"></div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-8">
+          <h3 class="text-5xl md:text-6xl font-serif text-gray-900 leading-tight tracking-tighter">
+            Tontine <br><span class="italic text-[#c2515d]">Digitale</span>
+          </h3>
+          <p class="text-gray-500 font-sans font-light text-lg leading-relaxed">
+            Ingénierie d'une plateforme financière communautaire. Sécurité bancaire et ergonomie mobile fusionnées pour l'inclusion financière.
+          </p>
+          <div class="flex items-center gap-8 pt-4">
+             <a href="https://github.com/Esthelia/gestion_tontine" class="group/btn relative overflow-hidden px-8 py-4 rounded-full bg-gray-900 text-white text-[10px] font-bold uppercase tracking-widest transition-all hover:bg-[#c2515d]">
+                <span class="relative z-10">GitHub Repository</span>
+             </a>
+             <span class="text-[10px] font-bold text-[#F5D7A1] uppercase tracking-widest">Laravel / MySQL</span>
+          </div>
         </div>
       </div>
 
-      <!-- E-commerce Restaurant -->
-      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-        <div>
-          <h3 class="font-serif text-2xl mb-4">Gourmet Express – E-commerce Restaurant</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Site e-commerce de restauration avec authentification utilisateur,
-            panier, commandes en ligne et affichage dynamique du menu du jour.
+      <div class="group relative grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1 space-y-8 lg:text-right">
+          <h3 class="text-5xl md:text-6xl font-serif text-gray-900 leading-tight tracking-tighter">
+            Gourmet <br><span class="italic text-[#c2515d]">Express</span>
+          </h3>
+          <p class="text-gray-500 font-sans font-light text-lg leading-relaxed lg:ml-auto max-w-sm">
+            E-commerce de haute gastronomie. Une interface fluide conçue pour sublimer l'émotion visuelle et la rapidité de commande.
           </p>
+          <div class="flex items-center gap-8 pt-4 lg:justify-end">
+             <span class="text-[10px] font-bold text-[#F5D7A1] uppercase tracking-widest">FullStack Design</span>
+             <a href="https://github.com/Esthelia/gourmetExpress" class="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#c2515d] hover:border-[#c2515d] hover:text-white transition-all duration-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+             </a>
+          </div>
         </div>
-        <div class="mt-6">
-          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
-          <a href="https://github.com/Esthelia/gourmetExpress/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+
+        <div class="lg:col-span-6 order-1 lg:order-2 relative">
+            <div class="relative overflow-hidden rounded-[2rem] bg-gray-900 p-3 shadow-2xl transition-transform duration-1000 group-hover:scale-[1.03]">
+                <div class="aspect-[4/3] bg-[#1a1a1a] rounded-[1.5rem] flex items-center justify-center">
+                    <span class="text-[10px] font-bold uppercase tracking-[1em] text-white/10 italic">Premium UX</span>
+                </div>
+            </div>
+            <div class="absolute -top-6 -left-6 bg-[#F5D7A1] text-gray-900 text-[9px] font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-xl">
+                Featured Work
+            </div>
+        </div>
+
+        <div class="lg:col-span-1 order-3 hidden lg:block text-right">
+            <span class="text-6xl font-serif italic text-gray-100 group-hover:text-[#F5D7A1]/40 transition-colors duration-700">02</span>
         </div>
       </div>
 
-      <!-- Gestion de Marché -->
-      <div class="bg-white p-8 shadow-md flex flex-col justify-between">
-        <div>
-          <h3 class="font-serif text-2xl mb-4">MyMarket – Gestion de Marché</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Application de gestion de marché : commerçants, emplacements,
-            paiements, suivi des opérations et options de retrait ou livraison.
-          </p>
+      <div class="group relative grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-1 hidden lg:block">
+            <span class="text-6xl font-serif italic text-gray-100 group-hover:text-[#F5D7A1]/40 transition-colors duration-700">03</span>
         </div>
-        <div class="mt-6">
-          <span class="block text-xs uppercase tracking-widest mb-4">Laravel · PHP · MySQL · Bootstrap</span>
-          <a href="https://github.com/Esthelia/myMarket/tree/master" target="_blank" class="text-sm underline hover:opacity-70">View on GitHub →</a>
+        
+        <div class="lg:col-span-6 relative">
+            <div class="relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-2xl transition-transform duration-1000 group-hover:scale-[1.03]">
+                <div class="aspect-[4/3] bg-gradient-to-br from-[#fdf8f3] to-[#f9f1e8] rounded-[1.5rem] flex items-center justify-center">
+                    <svg class="w-20 h-20 text-[#c2515d]/10" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-8">
+          <h3 class="text-5xl md:text-6xl font-serif text-gray-900 leading-tight tracking-tighter">
+            Market <br><span class="italic text-[#c2515d]">Manager</span>
+          </h3>
+          <p class="text-gray-500 font-sans font-light text-lg leading-relaxed">
+            Optimisation logistique urbaine. Une plateforme conçue pour rationaliser les échanges et la gestion des stocks en temps réel.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-4">
+             <div class="px-6 py-2 border border-gray-100 rounded-full text-[10px] font-bold text-gray-400 uppercase tracking-widest">Logistics App</div>
+             <a href="https://github.com/Esthelia/myMarket" class="px-6 py-2 bg-[#F5D7A1] rounded-full text-[10px] font-black text-gray-900 uppercase tracking-widest hover:bg-[#c2515d] hover:text-white transition-colors">Explorer</a>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <!-- ================= MES SERVICES ================= -->
-<section id="services" class="bg-white py-24 md:py-32 reveal">
-  <div class="max-w-6xl mx-auto px-6 md:px-16">
-    <h2 class="font-serif text-4xl md:text-6xl mb-16 text-center">Mes Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<section id="services" class="relative bg-[#f4f4f4] py-20 md:py-28 overflow-hidden font-sans">
+  
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-[#e9e9e9] -skew-x-12 translate-x-20"></div>
+  <div class="absolute top-10 left-10 w-32 h-32 border border-gray-200 rounded-full"></div>
+  <div class="absolute bottom-10 left-1/4 w-64 h-64 bg-[#c2515d]/5 rounded-full blur-3xl"></div>
 
-      <!-- SERVICE 1 -->
-      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
-        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
-          <img src="/assets/dev.jpg" alt="Développement Web" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    
+    <div class="relative mb-20">
+      <span class="absolute -top-10 left-0 text-7xl md:text-9xl font-black text-black/[0.03] uppercase tracking-tighter">Expertise</span>
+      <h2 class="relative text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter">
+        Mes <span class="text-[#c2515d]">Services</span>
+      </h2>
+      <div class="w-12 h-1 bg-black mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="group relative bg-white p-2 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500">
+        <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+          <img src="/assets/dev.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="text-[10px] font-black text-[#F5D7A1] uppercase tracking-[0.3em]">Engineering</span>
+            <h3 class="text-xl font-bold text-white uppercase tracking-tighter">Web Fullstack</h3>
+          </div>
         </div>
-        <h3 class="text-2xl font-semibold mb-4">Développement Web Full Stack</h3>
-        <p class="text-gray-600 text-sm md:text-base">
-          Conception et développement d’applications web performantes et maintenables
-          en utilisant Laravel, Angular et Tailwind CSS.
-        </p>
+        <div class="p-6">
+          <p class="text-gray-500 text-xs leading-relaxed">Systèmes robustes sous Laravel & Angular. Code propre, architecture scalable.</p>
+          <div class="mt-6 flex justify-between items-center">
+            <div class="flex -space-x-2">
+              <div class="w-6 h-6 rounded-full bg-gray-100 border-2 border-white"></div>
+              <div class="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"></div>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 group-hover:text-[#c2515d] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </div>
+        </div>
       </div>
 
-      <!-- SERVICE 2 -->
-      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
-        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
-          <img src="/assets/mobile.jpg" alt="Développement Mobile" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="group relative bg-white p-2 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 md:-translate-y-4">
+        <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+          <img src="/assets/mobile.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#c2515d]/80 via-[#c2515d]/20 to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="text-[10px] font-black text-white uppercase tracking-[0.3em]">Interfaces</span>
+            <h3 class="text-xl font-bold text-white uppercase tracking-tighter">Mobile Apps</h3>
+          </div>
         </div>
-        <h3 class="text-2xl font-semibold mb-4">Développement Mobile</h3>
-        <p class="text-gray-600 text-sm md:text-base">
-          Création d’applications mobiles multiplateformes avec Flutter, offrant
-          une expérience utilisateur fluide et moderne.
-        </p>
+        <div class="p-6">
+          <p class="text-gray-500 text-xs leading-relaxed">Applications natives & hybrides avec Flutter. Fluidité et design centré utilisateur.</p>
+          <div class="mt-6 flex justify-between items-center">
+            <div class="flex -space-x-2">
+              <div class="w-6 h-6 rounded-full bg-gray-100 border-2 border-white"></div>
+              <div class="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"></div>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 group-hover:text-[#c2515d] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </div>
+        </div>
       </div>
 
-      <!-- SERVICE 3 -->
-      <div class="group bg-[#EFEAE3] p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center flex flex-col items-center">
-        <div class="w-full h-48 mb-6 overflow-hidden rounded-xl">
-          <img src="/assets/telecom.jpg" alt="Télécom & Réseau" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="group relative bg-white p-2 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500">
+        <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+          <img src="/assets/telecom.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <span class="text-[10px] font-black text-[#F5D7A1] uppercase tracking-[0.3em]">Networks</span>
+            <h3 class="text-xl font-bold text-white uppercase tracking-tighter">Telecom & NOC</h3>
+          </div>
         </div>
-        <h3 class="text-2xl font-semibold mb-4">Télécom & Réseau</h3>
-        <p class="text-gray-600 text-sm md:text-base">
-          Expertise en réseaux mobiles (2G/3G/4G), supervision RAN, NOC Front Office,
-          transmission fibre et IP/MPLS.
-        </p>
+        <div class="p-6">
+          <p class="text-gray-500 text-xs leading-relaxed">Supervision RAN & maintenance. Haute disponibilité des infrastructures critiques.</p>
+          <div class="mt-6 flex justify-between items-center">
+            <div class="flex -space-x-2">
+              <div class="w-6 h-6 rounded-full bg-gray-100 border-2 border-white"></div>
+              <div class="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"></div>
+            </div>
+            <svg class="w-5 h-5 text-gray-300 group-hover:text-[#c2515d] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
-</section>
 
+</section>
 
 
 
 <!-- ================= CHIFFRES CLES ================= -->
-<section id="stats" class="bg-[#EFEAE3] py-24 md:py-32">
-  <div class="max-w-6xl mx-auto px-6 md:px-16 text-center">
-    <h2 class="font-serif text-4xl md:text-6xl mb-16">Chiffres clés</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-      
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <span class="text-4xl md:text-5xl font-bold text-black">4+</span>
-        <p class="mt-2 text-gray-600 text-sm md:text-base">Années d’expérience</p>
+<section id="stats" class="relative bg-[#050505] py-24 md:py-32 overflow-hidden">
+  
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c2515d]/10 rounded-full blur-[120px]"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    
+    <div class="flex flex-col items-center mb-20">
+      <div class="w-12 h-px bg-[#c2515d] mb-6"></div>
+      <h2 class="text-xs font-black uppercase tracking-[0.8em] text-white/40 mb-4">Aperçu Analytique</h2>
+      <p class="text-3xl md:text-5xl font-serif italic text-white">Chiffres <span class="text-[#c2515d]">Impactants</span></p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-0">
+
+      <div class="group relative p-10 md:border-r border-white/5 transition-all duration-500 hover:bg-white/[0.02]">
+        <div class="relative z-10">
+          <span class="text-[10px] font-black text-[#F5D7A1] tracking-widest uppercase mb-4 block">Expérience</span>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-6xl md:text-8xl font-black text-white tracking-tighter transition-transform group-hover:scale-110 duration-700">4</h3>
+            <span class="text-3xl font-light text-[#c2515d]">+</span>
+          </div>
+          <p class="mt-4 text-gray-500 text-[11px] uppercase tracking-widest font-medium leading-relaxed">
+            Années d'expertise <br>en ingénierie.
+          </p>
+        </div>
+        <div class="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-white/5 group-hover:border-[#c2515d]/30 transition-colors"></div>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <span class="text-4xl md:text-5xl font-bold text-black">20+</span>
-        <p class="mt-2 text-gray-600 text-sm md:text-base">Projets réalisés</p>
+      <div class="group relative p-10 lg:border-r border-white/5 transition-all duration-500 hover:bg-white/[0.02]">
+        <div class="relative z-10">
+          <span class="text-[10px] font-black text-[#F5D7A1] tracking-widest uppercase mb-4 block">Portfolio</span>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-6xl md:text-8xl font-black text-white tracking-tighter transition-transform group-hover:scale-110 duration-700">20</h3>
+            <span class="text-3xl font-light text-[#c2515d]">+</span>
+          </div>
+          <p class="mt-4 text-gray-500 text-[11px] uppercase tracking-widest font-medium leading-relaxed">
+            Réalisations numériques <br>déployées avec succès.
+          </p>
+        </div>
+        <div class="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-white/5 group-hover:border-[#c2515d]/30 transition-colors"></div>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <span class="text-4xl md:text-5xl font-bold text-black">3</span>
-        <p class="mt-2 text-gray-600 text-sm md:text-base">Entreprises collaborées</p>
+      <div class="group relative p-10 md:border-r border-white/5 transition-all duration-500 hover:bg-white/[0.02]">
+        <div class="relative z-10">
+          <span class="text-[10px] font-black text-[#F5D7A1] tracking-widest uppercase mb-4 block">Ecosystème</span>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-6xl md:text-8xl font-black text-white tracking-tighter transition-transform group-hover:scale-110 duration-700">03</h3>
+          </div>
+          <p class="mt-4 text-gray-500 text-[11px] uppercase tracking-widest font-medium leading-relaxed">
+            Partenariats corporate <br>& collaborations clés.
+          </p>
+        </div>
+        <div class="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-white/5 group-hover:border-[#c2515d]/30 transition-colors"></div>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <span class="text-4xl md:text-5xl font-bold text-black">6+</span>
-        <p class="mt-2 text-gray-600 text-sm md:text-base">Technologies maîtrisées</p>
+      <div class="group relative p-10 transition-all duration-500 hover:bg-white/[0.02]">
+        <div class="relative z-10">
+          <span class="text-[10px] font-black text-[#F5D7A1] tracking-widest uppercase mb-4 block">Stack Tech</span>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-6xl md:text-8xl font-black text-white tracking-tighter transition-transform group-hover:scale-110 duration-700">06</h3>
+            <span class="text-3xl font-light text-[#c2515d]">+</span>
+          </div>
+          <p class="mt-4 text-gray-500 text-[11px] uppercase tracking-widest font-medium leading-relaxed">
+            Langages & frameworks <br>maîtrisés.
+          </p>
+        </div>
+        <div class="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-white/5 group-hover:border-[#c2515d]/30 transition-colors"></div>
       </div>
 
+    </div>
+
+    <div class="mt-20 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent relative">
+        <div class="absolute top-0 left-1/4 w-1/3 h-px bg-[#c2515d] shadow-[0_0_15px_#c2515d]"></div>
     </div>
   </div>
 </section>
 
+
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="bg-white py-32 relative overflow-hidden reveal-contact">
-  <!-- Bulles flottantes -->
-  <div class="absolute top-0 left-1/3 w-[150px] h-[150px] bg-blue-200 rounded-full opacity-30 animate-bounce-slow"></div>
-  <div class="absolute bottom-10 right-10 w-[100px] h-[100px] bg-pink-200 rounded-full opacity-20 animate-bounce-slow"></div>
-  <div class="absolute top-20 right-1/4 w-[80px] h-[80px] bg-yellow-200 rounded-full opacity-25 animate-bounce-slow"></div>
-
-  <!-- Frame autour de la section -->
-  <span class="absolute inset-0 border-2 border-gray-300 rounded-3xl pointer-events-none animate-pulse-frame"></span>
-
-  <div class="absolute top-20 right-1/25 w-[80px] h-[40px] bg-orange-200 rounded-full opacity-25 animate-bounce-slow"></div>
-  <div class="absolute top-20 right-1/12 w-[80px] h-[100px] bg-red-200 rounded-full opacity-25 animate-bounce-slow"></div>
-  <div class="absolute top-20 right-1/8 w-[80px] h-[10px] bg-gray-500 rounded-full opacity-25 animate-bounce-slow"></div>
-
-  <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-    <h2 class="font-serif text-4xl md:text-6xl leading-tight contact-title opacity-0">
-      Travaillons <br />
-      <span class="text-3xl md:text-5xl text-gray-700">ensemble</span>
-    </h2>
-    <p class="mt-8 text-gray-600 leading-relaxed text-lg md:text-xl contact-text opacity-0">
-      Un projet, une idée ou simplement envie d’échanger ?<br>
-      Je suis ouverte à de nouvelles collaborations.
-    </p>
-
-    <a href="mailto:ton.email@example.com"
-       class="mt-12 inline-flex items-center justify-center gap-3 bg-black text-white font-semibold px-14 py-4 rounded-full shadow-lg 
-              hover:bg-gray-800 hover:scale-105 transform transition-all duration-300 group relative overflow-hidden contact-btn opacity-0">
-
-      <span class="relative z-10">Me contacter</span>
-      <span class="relative z-10 text-xl">→</span>
-
-      <span class="absolute inset-0 bg-white opacity-10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></span>
-    </a>
+<section id="contact" class="relative py-32 md:py-48 overflow-hidden bg-[#fffcf9]">
+  
+  <div class="absolute inset-0 z-0 opacity-60">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254236.6380628352!2d-4.119747963495447!3d5.34844607730999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3a70ba55938f369!2sAbidjan!5e0!3m2!1sfr!2sci!4v1700000000000" 
+      class="w-full h-full border-none grayscale opacity-30 contrast-75 brightness-110" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
   </div>
+
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#F5D7A1]/20 to-transparent"></div>
+  <div class="absolute -top-20 -left-20 w-96 h-96 bg-[#c2515d]/5 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#F5D7A1]/10 rounded-full blur-[150px]"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <div class="lg:col-span-6 space-y-10">
+        <div class="inline-flex items-center gap-4">
+            <div class="h-px w-12 bg-[#c2515d]"></div>
+            <span class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#c2515d]">Contact Privé</span>
+        </div>
+        
+        <h2 class="text-6xl md:text-8xl font-serif leading-[0.9] text-gray-900">
+          Créons <br />
+          <span class="italic font-light text-[#c2515d]">l'exception.</span>
+        </h2>
+
+        <p class="text-gray-500 font-light text-lg md:text-xl leading-relaxed max-w-md">
+          Disponible pour des collaborations sélectives où la technique rencontre l'élégance.
+        </p>
+
+        <div class="space-y-6 pt-10">
+            <div class="group flex items-center gap-6 cursor-pointer">
+                <div class="w-12 h-12 rounded-full border border-[#F5D7A1] flex items-center justify-center group-hover:bg-[#F5D7A1] transition-all duration-500">
+                    <svg class="w-4 h-4 text-[#c2515d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Email</span>
+                    <p class="text-gray-900 font-medium">estheredwige98@gmail.com</p>
+                </div>
+            </div>
+            <div class="group flex items-center gap-6 cursor-pointer">
+                <div class="w-12 h-12 rounded-full border border-[#F5D7A1] flex items-center justify-center group-hover:bg-[#F5D7A1] transition-all duration-500">
+                    <svg class="w-4 h-4 text-[#c2515d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Base</span>
+                    <p class="text-gray-900 font-medium">Cocody Rivera 2, Anono ,Abidjan, Côte d'Ivoire</p>
+                </div>
+            </div>
+            <div class="group flex items-center gap-6 cursor-pointer">
+                <div class="w-12 h-12 rounded-full border border-[#F5D7A1] flex items-center justify-center group-hover:bg-[#F5D7A1] transition-all duration-500 shadow-sm group-hover:shadow-[#F5D7A1]/50">
+                    <svg class="w-4 h-4 text-[#c2515d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-[0.3em] block mb-1">Direct Line</span>
+                    <p class="text-gray-900 font-bold tracking-tight group-hover:text-[#c2515d] transition-colors">
+                        +225 07 78 65 54 05
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 relative">
+        <div class="relative bg-white/40 backdrop-blur-md border border-white p-2 rounded-[4rem] shadow-2xl">
+            <div class="bg-white rounded-[3.5rem] p-12 md:p-20 text-center space-y-8">
+                <div class="w-20 h-20 bg-[#fdf8f3] rounded-full mx-auto flex items-center justify-center border border-[#F5D7A1]/30">
+                    <span class="text-2xl animate-pulse">✨</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tighter text-gray-900">PRÊT(E) À COMMENCER ?</h3>
+                <p class="text-gray-400 text-sm font-light uppercase tracking-widest">Réponse sous 24h maximum</p>
+                
+                <a href="mailto:votremail@exemple.com" 
+                   class="inline-block w-full py-6 rounded-full bg-gradient-to-r from-[#c2515d] to-[#F5D7A1] text-white font-black text-[11px] tracking-[0.4em] uppercase shadow-xl shadow-[#c2515d]/20 hover:shadow-[#c2515d]/40 transition-all duration-500 transform hover:-translate-y-1">
+                    Envoyer un message
+                </a>
+                
+                <div class="pt-8 flex justify-center gap-8">
+                    <a href="#" class="text-[10px] font-bold text-gray-400 hover:text-[#c2515d] tracking-widest transition-colors uppercase">LinkedIn</a>
+                    <a href="#" class="text-[10px] font-bold text-gray-400 hover:text-[#c2515d] tracking-widest transition-colors uppercase">GitHub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-[#F5D7A1] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
+
+
 
 
 
